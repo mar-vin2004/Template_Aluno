@@ -1,0 +1,51 @@
+h1{
+    text-align: center;
+}
+
+
+img{
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+.topico{
+    text-align: center;
+}
+
+.lista{
+    text-align: center;
+}
+
+#topicos{
+    color: red
+}
+
+.listinha{
+    text-align: center;
+}
+
+#novalinha{
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+}
+
+
+/* .curriculo{
+    border: 10px solid green;
+    height: fit-content;
+    width: fit-content;
+} */
+
+body{
+    background-color: darkorange;
+    border: 10px solid green;
+    padding: 0px;
+    margin: 0px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+link {
+    font-family: 'Radio Canada', sans-serif;
+}
