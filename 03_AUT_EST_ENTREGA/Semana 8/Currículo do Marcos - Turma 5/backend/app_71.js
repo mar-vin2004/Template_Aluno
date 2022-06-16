@@ -1,17 +1,16 @@
 const express = require('express'); 
+const app = express();
+
+const sqlite3 = require('sqlite3').verbose();
+const DBPATH = 'SEMANA_07/02_TUTORIAL/backend/dbUser.db';
+
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-const sqlite3 = require('sqlite3').verbose();
-const DBPATH = 'dbUser.db';
-
-const hostname = '127.0.0.1';
-const port = 3071;
-const app = express();
 
 /* Servidor aplicação */
 
-app.use(express.static("../frontend/"));
+app.use(express.static("SEMANA_07/02_TUTORIAL/frontend/"));
 
 
 /* Definição dos endpoints */
@@ -84,6 +83,6 @@ app.post('/userdelete', urlencodedParser, (req, res) => {
 	db.close(); // Fecha o banco
 });
 
-app.listen(port, hostname, () => {
-  console.log(`Page server running at http://${hostname}:${port}/`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server running`);
 });
